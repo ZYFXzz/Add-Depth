@@ -9,19 +9,29 @@ function getClientInfo() {
   }
 }
 
-//function getTranslations(langCode) {
-//  if(langCode == "ja-jp") {
-//    return [
-//      ["Remove Short Silences", "短い無声区間を取り除�?"],
-//      ["Threshold", "しきい�??"],
-//      ["Scope", "スコープ"],
-//      ["Selected Notes", "選択されたノート"],
-//      ["Current Track", "現在のトラッ�?"],
-//      ["Entire Project", "プロジェクト全体"],
-//    ];
-//  }
-//  return [];
-//}
+function getTranslations(langCode) {
+  if(langCode == "ja-jp") {
+    return [
+      ["Add Depth", "ワンタッチで音符を切り分ける"],
+      ["Length", "長さ"],
+      ["Scope", "スコープ"],
+      ["Selected Notes", "選択されたノート"],
+      ["Current Track", "現在のトラック"],
+      ["Entire Project", "プロジェクト全体"]
+    ];
+  }
+  if(langCode == "zh-cn") {
+    return [
+      ["Add Depth", "一键拆分音符"],
+      ["Length", "长度"],
+      ["Scope", "作用范围"],
+      ["Selected Notes", "选择的音符"],
+      ["Current Track", "当前音轨"],
+      ["Entire Project", "整个项目"]
+    ];
+  }
+  return [];
+}
 
 function sortNotes(arr_notes) {
   return arr_notes.sort(function(a,b) {
